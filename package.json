@@ -1,0 +1,17 @@
+{
+  "name": "yelp-photo-client",
+  "version": "1.0.0",
+  "description": "Get more photos from the Yelp API",
+  "main": "src/client.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/jest ./test/parser.test.js"
+  },
+  "author": "alexywang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
