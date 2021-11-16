@@ -4,8 +4,8 @@ The Yelp Business API only gives you a maximum of 3 photos. This client scrapes 
 
 # Requirements
 The only info this package needs to work is the ID of the business that you wish to obtain photos for. 
+This package doesn't require an API key, but you will need one if you plan to find ID's using the Yelp API. 
 
-ID's can be found through the Yelp API (i.e. the Business Search endpoint). This package doesn't require an API key, but you will need one if you plan to find ID's using the Yelps API. 
 # Usage
 
 ```
@@ -34,8 +34,8 @@ getPhotos(some_business_id)
 ```
 
 ## Query Params
-Query Params can be optionally passed to the `getPhotos` method to be appended to the requests. 
-Known useful query parameters are: 
+Query params can be optionally passed to the `getPhotos` method to be appended to the requests. 
+Known useful parameters are: 
 
 - `start`: A number offset for the first image returned. Useful for pagination since scraping can only return a subset of all results with a single request.
 - `tab`: A string representing the Yelp tab to scrape from (i.e. `food`, `inside`, `outside`, `drink`, `menu`)
