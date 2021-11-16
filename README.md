@@ -1,12 +1,11 @@
 # Yelp Image Helper
 
-The Yelp Business API only gives you a maximum of 3 photos. This client scrapes the Yelp business page to provide more photos.
+The Yelp Business API only gives you a maximum of 3 photos. This client scrapes the Yelp pages by business ID to provide more photos.
 
 # Requirements
-The only info this package needs to work is the Yelp Business ID that you wish to obtain photos for. 
+The only info this package needs to work is the ID of the business that you wish to obtain photos for. 
 
-Business ID's can be found through the Yelp API, such as their Business Search endpoint. The Yelp API requires an API key, but this package does not.
-
+ID's can be found through the Yelp API (i.e. the Business Search endpoint). This package doesn't require an API key, but you will need one if you plan to find ID's using the Yelps API. 
 # Usage
 
 ```
@@ -38,5 +37,12 @@ client.getPhotos(some_business_id)
 Query Params can be optionally passed to the `getPhotos` method to be appended to the requests. 
 Known useful query parameters are: 
 
-- `start`: The index offset of the first image returned. Useful for pagination since scraping can only return a subset of all results with a single request.
-- `tab`: The Yelp tab to scrape from (i.e. `food`, `inside`, `outside`, `drink`, `menu`)
+- `start`: A number offset for the first image returned. Useful for pagination since scraping can only return a subset of all results with a single request.
+- `tab`: A string representing the Yelp tab to scrape from (i.e. `food`, `inside`, `outside`, `drink`, `menu`)
+
+```javascript
+client.getPhotos(some_business_id, {
+  start: 30,
+  tab: 'food'
+})
+```
