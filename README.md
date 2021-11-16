@@ -13,9 +13,9 @@ npm install yelp-photo-client
 ```
 
 ```javascript
-const client = require('yelp-photo-client')();
+getPhotos = require('yelp-photo-client');
 
-client.getPhotos(some_business_id)
+getPhotos(some_business_id)
   .then(console.log)
 
 /*
@@ -41,7 +41,7 @@ Known useful query parameters are:
 - `tab`: A string representing the Yelp tab to scrape from (i.e. `food`, `inside`, `outside`, `drink`, `menu`)
 
 ```javascript
-client.getPhotos(some_business_id, {
+getPhotos(some_business_id, {
   start: 30,
   tab: 'food'
 })
