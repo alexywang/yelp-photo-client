@@ -1,6 +1,6 @@
 {
   "name": "yelp-photo-client",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Get more photos from the Yelp API",
   "main": "src/client.js",
   "scripts": {
