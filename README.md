@@ -33,6 +33,9 @@ getPhotos(some_business_id)
 */
 ```
 
+`getPhotos` is an async method that returns a promise of an array of photos.
+
+
 ## Query Params
 Query params can be optionally passed to the `getPhotos` method to be appended to the requests. 
 Known useful parameters are: 
